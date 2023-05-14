@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plutus Circle</title>
+  </head>
+  <body>
+    <h1>Welcome to my page!</h1>
+    <p>This is some text on my page.</p>
+    <ul>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ul>
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hamburger Menu Example</title>
+    <style>
+      /* styles for hamburger menu icon */
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 999;
+      }
+
+      .hamburger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #000;
+        border-radius: 3px;
+      }
+
+      /* styles for navigation menu */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 998;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        nav.active ul {
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          top: 100px;
+          left: 0;
+          width: 100%;
+          background: #fff;
+          padding: 20px;
+        }
+
+        nav.active ul li {
+          margin-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <!-- hamburger icon -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    
+      <!-- navigation menu -->
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      /* toggle active class on hamburger and nav */
+      const hamburger = document.querySelector('.hamburger');
+      const nav = document.querySelector('nav');
+
+      hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>
+
